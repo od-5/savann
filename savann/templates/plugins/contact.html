@@ -1,0 +1,45 @@
+{% load i18n %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/contact-form.css" type="text/css" media="screen">
+<div class="container_12 wrapper">
+    <article class="grid_5">
+        <h3 class="title">{{ plugin.name }}</h3>
+        {{ plugin.map|safe }}
+        <div class="top_1">
+            {{ plugin.contact_info|safe }}
+        </div>
+    </article>
+    <article class="grid_5 prefix_1">
+        <h3 class="title">{{ plugin.name_form }}</h3>
+
+        <div id="contact_form">
+            <form action="" method="post" id="contact-form">
+                {% csrf_token %}
+                <fieldset>
+                    <input type="hidden" name="action" value="feed_back"/>
+
+                    <div class="field">
+                        <input name="name" required="required" type="text" placeholder="{% trans "Name" %}:" class="text-input">
+                    </div>
+                    <div class="field">
+                        <input name="email" required="required" type="text" placeholder="E-mail:" class="text-input"/>
+                    </div>
+                    <div class="field">
+                        <input name="phone" type="text" placeholder="{% trans "Phone" %}:" class="text-input"/>
+                    </div>
+                    <div class="area">
+                        <textarea name="message" required="required" class="text-input" placeholder="{% trans "Message" %}:"></textarea>
+
+                        <div class="buttons-wrapper"><a id="submit">{% trans "Submit" %}</a></div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </article>
+</div>
+<div id="success">
+    <div class="wrap">
+        <a href="#" onclick="return false;" class="link">X</a>
+    <h2>{% trans "Thank U" %}.</h2>
+        <p>{% trans "Your message has been sent" %}.</p>
+        </div>
+</div>

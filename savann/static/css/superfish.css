@@ -1,0 +1,117 @@
+.sf-menu {padding:0; position:absolute; top:0px; left:0px; z-index:3;}
+
+.sf-menu > li {
+	float:left; 
+	font-size:18px; 
+	line-height:1.2em; 
+	padding:0 2px 0 0; 
+	background:url(../images/spacer-menu.gif) right 0 no-repeat;
+}
+.sf-menu li.last-item {background:none; padding:0;}
+
+.sf-menu > li > a {
+	display:block; 
+	color:#000; 
+	padding:11px 21px 14px 22px;
+	text-decoration:none;
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu .current {}
+
+.sf-menu > li:hover > a, .sf-menu > li.sfHover > a, .sf-menu .current > a {background:url(../images/menu-hover.png) 0 0 repeat;}
+
+/* sub-menu */
+
+.sf-menu ul {
+	display:none;
+	position:absolute;
+	width:180px; /* left offset of submenus need to match (see below) */
+	padding:0;
+	background:none;
+	border:none;
+	border-left:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
+	z-index:200;
+}
+
+.sf-menu ul li {
+	background:#fff;
+	border:none;
+	border-bottom:1px solid #e0e0e0;
+	width:100%;
+	padding:0px;
+	margin:0;
+}
+
+.sf-menu li {
+	position:relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:0px;
+	top:49px; /* match top ul list item height */
+	z-index:99;
+}
+
+/* sub-menu ul */
+
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	background:#0ff;
+	width:180px;
+	margin:0;
+	padding:0;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:182px; /* match ul width */
+	top:0px;
+	width:180px;
+	padding:0px;
+	background:none;
+	border:none;
+	border-top:1px solid #e0e0e0;
+	border-left:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
+}
+
+/* sub-menu a */
+
+.sf-menu li:hover li a, 
+.sf-menu li.sfHover li a {
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+	margin:0;
+	padding:0 0 0 13px;
+	border:none;
+	color:#b9b9b9;
+	font-style:normal;
+	font-size:13px;
+	line-height:30px;
+	text-decoration:none;
+}
+.sf-menu li li a:hover, .sf-menu li li.sfHover a {
+	color:#000;
+}
+.sf-menu li li li {
+	position:relative;
+	background:#fff;
+	width:180px;
+	margin:0;
+	padding:0;
+}
+.sf-menu li li.sfHover li a {
+	color:#b9b9b9;
+	background:none; 
+	padding:0 0 0 13px;
+}
+
+/* hover sub-menu ul li */
+
+.sf-menu ul li ul li:hover, .sf-menu ul li ul li.sfHover  { 
+}
+.sf-menu li li.sfHover li a:hover {background:none; color:#000;}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	outline:0;
+}

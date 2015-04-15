@@ -1,0 +1,47 @@
+
+{% load template_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+</head>
+<body style="font-family: 'Arial', sans-serif; font-size: 12px;">
+<table style="font-family: 'Arial', sans-serif; color: #000; font-size: 12px;" width="600" align="center"
+       cellspacing="0"
+       cellpadding="0">
+    <tr>
+        <td style=" padding-top:  20px;">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+
+
+                    <td style="text-align: right; padding-top: 5px;">
+
+{#                        <a style="color: #000;" href="mailto:info@menabling.ru">info@menabling.ru</a>#}
+                    </td>
+                </tr>
+            </table>
+    {% block mail %}
+
+    {% endblock %}
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td style="text-align: center; padding: 20px 0; color: #000">
+                        <span style="display: block; text-align: center; font-size: 11px; margin-bottom: 10px;">© 2015
+                            </span>
+                        <span style="display: block; text-align: center; font-size: 11px; margin-bottom: 10px;"></span>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+
+
+</table>
+
+</body>
+</html>

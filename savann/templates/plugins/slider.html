@@ -1,0 +1,35 @@
+{% load thumbnail %}
+<div class="row-3">
+    <div class="main">
+        <ul class="kwicks">
+            {% for item in plugin.slider.images.all %}
+                <li id="img{{ item.id }}"></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<style>
+    {% for item in plugin.slider.images.all %}
+        #img{{ item.id }} {
+        {% thumbnail item.image '575x375' crop="center" as img %}
+            background: url({{ img.url }}) {% if forloop.counter == 3 %}0{% else %}center{% endif %} 0 no-repeat;
+        {% endthumbnail %}
+        }
+    {% endfor %}
+</style>
+<!--
+#kwick2 {
+	background:url(../images/slide-2.jpg) center 0 no-repeat;
+}
+#kwick3 {
+	background:url(../images/slide-3.jpg) 0 0 no-repeat;
+}
+#kwick4 {
+	background:url(../images/slide-4.jpg) center 0 no-repeat;
+}
+#kwick5 {
+	background:url(../images/slide-5.jpg) center 0 no-repeat;
+}
+#kwick6 {
+	background:url(../images/slide-6.jpg) center 0 no-repeat;
+}-->

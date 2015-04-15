@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load template_tags thumbnail cms_tags i18n %}
+{% block content %}
+    {% placeholder "content" %}
+    {% with cats=request.current_page.posts.all|filter_cat:1|filter:request no_cats=request.current_page.posts.all|filter_cat:0|filter:request %}
+        <section id="content">
+            <div class="main">
+                <div class="padding-content1">
+                    <div class="container_12 wrapper">
+
+                        {% if cats %}
+
+                            <article class="grid_9">
+                                {% for item in cats %}
+                                    <div class="wrapper p3">
+                                        <div class="grid_3 alpha">
+                                            <div class="padding-right2">
+                                                <figure class="img-box1"><a href="{{ item.master.get_absolute_url }}" class="">
+                                                    {% thumbnail item.master.image '207x179' upscale=False as img %}
+                                                        <img src="{{ img.url }}" width="{{ img.width }}"
+                                                             height="{{ img.height }}" alt="{{ item.name }}"
+                                                             style="margin: {{ img|margin:'207x179' }}">
+                                                    {% endthumbnail %}
+                                                </a>
+
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="grid_5">
+                                            <p class="margin-none text-1"><strong>{{ item.name }}</strong></p>
+
+                                            {{ item.short|safe }}
+                                            <a href="{% if item.get_absolute_url %}{{ item.get_absolute_url }}{% else %}{{ item.master.get_absolute_url }}{% endif %}"
+       class="{{ item.master.type_button }}"><strong><strong>{% trans 'Read More' %}</strong></strong></a>
+                                        </div>
+
+                                    </div>
+                                    {#                                    {% include 'includes/small-post.html' %}#}
+                                {% endfor %}
+
+                                <div class="clear"></div>
+                            </article>
+
+
+
+                        {% endif %}
+                        {% if no_cats %}
+
+<div class="grid_3">
+                                {% for item in no_cats %}
+                                    {% include 'includes/small-post.html' %}
+                                {% endfor %}
+
+                                <div class="clear"></div>
+</div>
+
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endwith %}
+{% endblock %}

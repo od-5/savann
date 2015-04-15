@@ -1,0 +1,21 @@
+{% load menu_tags %}
+
+{% for child in children %}
+    <li class="{% if child.selected %} current{% endif %}{% if child.ancestor %} active{% endif %}{% if forloop.last and child.level == 0 %} last-item{% endif %}">
+        <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        {% if child.children %}
+            <ul>
+                {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+
+            </ul>
+        {% endif %}
+        {% if child.attr.posts %}
+             <ul>
+                {% for item in child.attr.posts %}
+
+                    <li><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+                {% endif %}
+    </li>
+{% endfor %}

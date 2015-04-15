@@ -1,0 +1,8 @@
+.img-box {behavior: url(js/PIE.htc); position:relative;}
+.box {behavior: url(js/PIE.htc); position:relative;}
+.box-1 {behavior: url(js/PIE.htc); position:relative;}
+#contact-form1 input {behavior: url(js/PIE.htc); position:relative;}
+.list-3 li {behavior: url(js/PIE.htc); position:relative;}
+#contact-form input[type=text] {behavior: url(js/PIE.htc); position:relative;}
+#contact-form textarea {behavior: url(js/PIE.htc); position:relative;}
+.buttons-wrapper a {behavior: url(js/PIE.htc);}

@@ -1,0 +1,34 @@
+{% if swf %}
+    <object class="banner"
+                classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+            <param name="allowScriptAccess" value="Always">
+            <param name="menu" value="false">
+            <param name="quality" value="high">
+            <param name="wmode" value="opaque">
+            <param name="movie" value="{{ plugin.file.url }}">
+            <param name="flashvars" value="url={{ plugin.url }}">
+
+            <embed
+                    src="{{ plugin.file.url }}"
+                    flashvars="url={{ plugin.url }}"
+                    quality="high"
+                    allowscriptaccess="Always"
+                    wmode="opaque"
+                    menu="false"
+                    swliveconnect="FALSE"
+                    type="application/x-shockwave-flash"
+                    width="{{ plugin.width|default:1000 }}">
+        </object>
+{% else %}
+                <div class="banner">
+                    <a href="{{ plugin.url }}"{% if plugin.blank %} target="_blank"{% endif %}><img src="{{ plugin.file.url }}" width="{{ plugin.width|default:1000 }}" height="{{ plugin.height|default:200 }}"/></a>
+                </div>
+{% endif %}
+                <div class="container_12 indent-bot3">
+                    <div class="wrapper">
+                        <div class="grid_12">
+                            <div class="spacer-1"></div>
+                        </div>
+                    </div>
+                </div>

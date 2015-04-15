@@ -1,0 +1,7 @@
+{% load i18n %}
+<article class="grid_4">
+    <h3 class="p2">{{ item.name }}</h3>
+    <div class="text-1 p2 small-post">{{ item.short|safe }}</div>
+    <a href="{% if item.get_absolute_url %}{{ item.get_absolute_url }}{% else %}{{ item.master.get_absolute_url }}{% endif %}"
+       class="{{ item.master.type_button }}"><strong><strong>{% trans 'Read More' %}</strong></strong></a>
+</article>

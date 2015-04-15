@@ -1,0 +1,13 @@
+syntax: glob
+*.pyc
+*.pyo
+*.DS_Store 
+*.installed.cfg
+*build/
+local_settings.py
+*dist/
+*.egg-info/
+*~
+media*
+env*
+.idea*

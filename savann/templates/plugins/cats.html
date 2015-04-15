@@ -1,0 +1,38 @@
+{% load thumbnail i18n %}
+<div class="container_12">
+                    <div class="wrapper">
+                        <article class="grid_3">
+                            <div class="padding-right">
+                                <div class="box">
+                                    <div class="padding-box">
+                                        <p class="text-box margin-none">{{ plugin.name|safe }}</p>
+
+                                        <div class="spacer-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        {% for item in cats %}
+                        <article class="grid_3">
+                            <div class="padding-right1">
+                                <figure class="img-box p1">
+                                    {% thumbnail item.image '195x118' crop="center" as img %}
+                                    <img src="{{ img.url }}" width="{{ img.width }}" height="{{ img.height }}"
+                                                                alt="{{ item.name }}">
+                                {% endthumbnail %}
+                                </figure>
+                                <p class="text-2 margin-none"><span class="text-3">{{ item.name }}</span></p>
+                                <a href="{{ item.get_absolute_url }}" class="link-1">{% trans 'Read More' %}</a>
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="container_12 indent-bot3">
+                    <div class="wrapper">
+                        <div class="grid_12">
+{#                            <div class="spacer-1"></div>#}
+                        </div>
+                    </div>
+                </div>
