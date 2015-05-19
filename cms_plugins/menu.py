@@ -8,7 +8,7 @@ class MenuPost(Modifier):
         if post_cut:
             return nodes
         for node in nodes:
-            node.attr['posts'] = Post.objects.language().filter(translations__active=True, pages_id=node.id).order_by('-date')
+            node.attr['posts'] = Post.objects.language().filter(translations__active=True, pages_id=node.id).order_by('-date').distinct()
         return nodes
 
 menu_pool.register_modifier(MenuPost)
