@@ -937,3 +937,15 @@ div.slideshow a.advance-link img, ul.thumbs li img {
     font-size: 13px;
     float: right;
 }
+
+h1 .logo, .logo a, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.sf-menu > li > a, .slogan, h3, .button-1, .button-2, .button-3, .form-button1, .text-box, .text-box1, .text-6, .list-3 li a, .buttons-wrapper a {
+    font-family: 'PT Serif', serif;
+}
+
+.sf-menu > li > a {
+    font-family: 'Lobster', cursive;
+}
