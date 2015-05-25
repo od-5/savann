@@ -2,6 +2,7 @@
 from datetime import datetime
 import math
 import random
+from contents.models import Post
 from django import template
 import re
 import time
@@ -147,6 +148,11 @@ def filter(value, req):
     return value.filter(language_code=req.LANGUAGE_CODE)
 
 
+def get_posts(page):
+    return Post.objects.language().filter(translations__pages_id__in=page.get_descendants(include_self=True).values_list('id', flat=True))
+
+
+register.filter('get_posts', get_posts)
 register.filter('filter', filter)
 register.filter('filter_cat', filter_cat)
 register.filter('format_letter', format_letter)

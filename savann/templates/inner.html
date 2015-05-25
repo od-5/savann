@@ -7,15 +7,17 @@
         <div class="main">
             <div class="padding-content">
                 {% placeholder "content" %}
-                {% if request.current_page.posts.count %}
+            {% with posts=request.current_page|get_posts %}
+                {% if posts|length %}
                     <div class="container_12 indent-bot3 posts">
-                        {% for item in request.current_page.posts.all|filter:request %}
+                        {% for item in posts|filter:request %}
                             {% include 'includes/small-post.html' %}
                         {% endfor %}
 
                         <div class="clear"></div>
                     </div>
                 {% endif %}
+            {% endwith %}
                 {% placeholder "content_bottom" %}
             </div>
         </div>
