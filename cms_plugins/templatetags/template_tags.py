@@ -149,7 +149,7 @@ def filter(value, req):
 
 
 def get_posts(page):
-    return Post.objects.language().filter(translations__active=True, translations__pages_id__in=page.get_descendants(include_self=True).values_list('id', flat=True))
+    return Post.objects.language().filter(translations__active=True, translations__pages_id__in=page.get_descendants(include_self=True).values_list('id', flat=True)).distinct()
 
 
 register.filter('get_posts', get_posts)
