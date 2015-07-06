@@ -7,11 +7,10 @@
         <div class="main">
             <div class="padding-content">
                 {% placeholder "content" %}
-            {% with posts=request.current_page|get_posts:request.LANGUAGE_CODE %}
+            {% with posts=request.current_page|get_posts:request %}
                 {% if posts|length %}
                     <div class="container_12 indent-bot3 posts">
                         {% for item in posts|filter:request %}
-                            {{ request.LANGUAGE_CODE }}
                             {% include 'includes/small-post.html' %}
                         {% endfor %}
 
