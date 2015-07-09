@@ -218,7 +218,7 @@ REDACTOR_UPLOAD = "uploads"
 # EMAIL_FILE_PATH = os.path.join(PROJECT_PATH, "media/message")
 
 DEFAULT_FROM_EMAIL = 'admin@newstracker.ru'
-DEFAULT_TO_EMAIL = ['zloigremlin@yandex.ru',]
+DEFAULT_TO_EMAIL = ['gulnaz.sharifzyanova@gmail.com',]
 
 
 HAYSTACK_CONNECTIONS = {
