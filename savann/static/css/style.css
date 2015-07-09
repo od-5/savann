@@ -949,3 +949,14 @@ h1 .logo, .logo a, h4 {
 .sf-menu > li > a {
     font-family: 'Lobster', cursive;
 }
+
+.logos{
+      position: absolute;
+  top: 83px;
+  z-index: 10;
+  left: 550px;
+}
+
+.logos img{
+    width: 155px;
+}
