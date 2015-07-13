@@ -264,7 +264,7 @@ header {
     width: 100%;
     background: url(../images/tail-row1.jpg) 0 0 repeat-x;
     position: relative;
-    z-index: 2;
+    z-index: 12;
 }
 
 .row-2 {
