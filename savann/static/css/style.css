@@ -952,9 +952,13 @@ h1 .logo, .logo a, h4 {
 
 .logos{
       position: absolute;
-  top: 83px;
+  top: 40px;
   z-index: 10;
-  left: 550px;
+  left: 50px;
+}
+.logos.tika{
+    right: 0;
+    left: auto;
 }
 
 .logos img{

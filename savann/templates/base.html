@@ -87,7 +87,7 @@
     </div>
 
 
-    {% static_placeholder "logo" %}
+        {% static_placeholder "logo" %}
     {% placeholder header %}
 
 </header>
@@ -141,6 +141,12 @@
                 <div class="container_12">
                     <div class="wrapper">
                         {% static_placeholder "footer_menu" %}
+                        <article class="grid_3">
+                         <a href="/" class="logos"><img src="{{ STATIC_URL }}images/white-logo.png"></a>
+                    </article>
+                    <article class="grid_5">
+                         <a href="/" class="logos tika"><img src="{{ STATIC_URL }}images/tica_logo_white.png"></a>
+                    </article>
                     </div>
                 </div>
             </div>
@@ -155,6 +161,7 @@
             <div class="wrapper">
                 <div class="text-bot">
                     {% static_placeholder "copyright" %}
+
 
                 </div>
                 <div class="footer-link">
