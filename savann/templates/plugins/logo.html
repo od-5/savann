@@ -1,6 +1,6 @@
 <div class="row-2">
     <div class="main">
-    {{ html|safe }}
+    {{ plugin.html|safe }}
             {% if plugin.name %}
                 <h1 class="logo"><a href="{{ plugin.href|default:'/' }}" title="{{ plugin.name }}"> {{ plugin.name|safe }}</a></h1>
             {% endif %}
