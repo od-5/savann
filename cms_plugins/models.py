@@ -65,6 +65,7 @@ class TextModelPlugin(CMSPlugin):
 
 class LogoModelPlugin(CMSPlugin):
     name = models.CharField(verbose_name=u'Заголовок', blank=True, null=True, max_length=255)
+    html = models.TextField(verbose_name=u'HTML', blank=True, null=True)
     href = models.CharField(verbose_name=u'Ссылка', max_length=255, blank=True, null=True)
     text = models.TextField(verbose_name=u'Текст', blank=True, null=True)
 
