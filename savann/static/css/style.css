@@ -285,12 +285,10 @@ header {
 }
 
 h1 {
-    padding: 0;
-    position: absolute;
-    top: 60px;
-    left: 298px;
     font-size: 70px;
     line-height: 1.2em;
+    text-align: center;
+    padding-top: 60px;
 }
 
 .logo, .logo a {
