@@ -16,7 +16,7 @@ def robots(request):
     ctx = {'robots': Robot.objects.all()}
     # return render_to_response('plugins/robots.txt', ctx, mimetype="text/plain")
     # return render_to_response('plugins/robots.txt', ctx)
-    return HttpResponse(loader.render_to_string('plugins/robots.txt', ctx), mimetype="text/plain")
+    return HttpResponse(loader.render_to_string('plugins/robots.txt', ctx), content_type="text/plain")
 
 
 class AjaxMethods(JSONResponseMixin, View):
