@@ -341,6 +341,9 @@ h1 {
     background: url(../images/pic-1.gif) 460px 0 repeat-y;
 }
 
+article h1 {
+    text-align: left;
+}
 article h1, h3 {
     font-size: 22px;
     line-height: 1.2em;
@@ -947,7 +950,7 @@ h1 .logo, .logo a, h4 {
     font-family: 'Lobster', cursive;
 }
 
-.sf-menu > li > a, .slogan, h3, .button-1, .button-2, .button-3, .form-button1, .text-box, .text-box1, .text-6, .list-3 li a, .buttons-wrapper a {
+article > h1, .sf-menu > li > a, .slogan, h3, .button-1, .button-2, .button-3, .form-button1, .text-box, .text-box1, .text-6, .list-3 li a, .buttons-wrapper a {
     font-family: 'PT Serif', serif;
 }
 
