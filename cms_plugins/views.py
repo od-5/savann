@@ -1,7 +1,8 @@
 # vim:fileencoding=utf-8
+from django.http import HttpResponse
 from contents.forms import FeedForm
 from contents.models import Post
-from django.shortcuts import render_to_response
+# from django.shortcuts import render_to_response
 from django.views.generic import View, TemplateView
 from savann.utils import JSONResponseMixin, allowed_action
 from models import Robot
@@ -14,7 +15,8 @@ from django.core.mail import EmailMessage
 def robots(request):
     ctx = {'robots': Robot.objects.all()}
     # return render_to_response('plugins/robots.txt', ctx, mimetype="text/plain")
-    return render_to_response('plugins/robots.txt', ctx)
+    # return render_to_response('plugins/robots.txt', ctx)
+    return HttpResponse(loader.render_to_string('plugins/robots.txt', ctx), mimetype="text/plain")
 
 
 class AjaxMethods(JSONResponseMixin, View):
