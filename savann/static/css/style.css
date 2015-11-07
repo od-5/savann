@@ -244,6 +244,7 @@ p {
     text-decoration: none;
 }
 p.logo {
+    font-family: 'Lobster', cursive;
     font-size: 70px;
     line-height: 1.2em;
     text-align: center;
