@@ -13,7 +13,8 @@ from django.core.mail import EmailMessage
 
 def robots(request):
     ctx = {'robots': Robot.objects.all()}
-    return render_to_response('plugins/robots.txt', ctx, mimetype="text/plain")
+    # return render_to_response('plugins/robots.txt', ctx, mimetype="text/plain")
+    return render_to_response('plugins/robots.txt', ctx)
 
 
 class AjaxMethods(JSONResponseMixin, View):
