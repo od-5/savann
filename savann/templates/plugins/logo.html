@@ -2,7 +2,7 @@
     <div class="main">
     {{ plugin.html|safe }}
             {% if plugin.name %}
-                <h1 class="logo"><a href="{{ plugin.href|default:'/' }}" title="{{ plugin.name }}"> {{ plugin.name|safe }}</a></h1>
+                <p class="logo"><a href="{{ plugin.href|default:'/' }}" title="{{ plugin.name }}"> {{ plugin.name|safe }}</a></p>
             {% endif %}
     <span class="slogan"><strong>{{ plugin.text|safe }}</strong></span>
     </div>

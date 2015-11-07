@@ -243,6 +243,12 @@ p {
 .logo, .logo a {
     text-decoration: none;
 }
+p.logo {
+    font-size: 70px;
+    line-height: 1.2em;
+    text-align: center;
+    padding-top: 60px;
+}
 
 /*********************************header*************************************/
 header {
