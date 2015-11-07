@@ -341,7 +341,7 @@ h1 {
     background: url(../images/pic-1.gif) 460px 0 repeat-y;
 }
 
-h3 {
+article h1, h3 {
     font-size: 22px;
     line-height: 1.2em;
     padding: 0 0 6px;
