@@ -12,10 +12,15 @@ sitemaps = {
     'cmspages': CMSSitemap,
 }
 
-urlpatterns = i18n_patterns('',
+urlpatterns = patterns(
+    '',
+    url(r'^robots\.txt$', robots),
+)
+
+urlpatterns += i18n_patterns('',
                             url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
                             url(r'^admin/', include(admin.site.urls)),
-                            url(r'^robots\.txt$', robots),
+                            # url(r'^robots\.txt$', robots),
                             url(r'^redactor/', include('redactor.urls')),
                             url(r'^ajax$', AjaxMethods.as_view(), name='ajax'),
                             url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
