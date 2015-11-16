@@ -12,13 +12,15 @@
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet'
           type='text/css'>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" type="text/css" media="screen">
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" type="text/css" media="screen">#}
+{##}
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/grid.css" type="text/css" media="screen">#}
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/superfish.css" type="text/css" media="screen">#}
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/kwicks.css" type="text/css" media="screen">#}
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/galleryffic.css" type="text/css" media="screen">#}
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen">#}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.min.css" type="text/css" media="screen">
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/grid.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/superfish.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/kwicks.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/galleryffic.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen">
     {% render_block "css" %}
     {% block css %}{% endblock %}
     <script src="{{ STATIC_URL }}js/jquery-1.6.1.min.js" type="text/javascript"></script>
