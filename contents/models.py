@@ -17,6 +17,7 @@ TYPE_BUTTON = (
 )
 
 MAIN_BLOCK = (
+    ('big', u'Верхний блок'),
     ('first', u'Блок 1'),
     ('last', u'Блок 2'),
 )

@@ -42,7 +42,8 @@ class FrontView(TemplateView):
 
     def get_context_data(self, **kwargs):
         posts = Post.objects.language().filter(active=True)
-        ctx = {'posts_1': posts.filter(main_block='first'),
+        ctx = {'posts_big': posts.filter(main_block='big'),
+               'posts_1': posts.filter(main_block='first'),
                'posts_2': posts.filter(main_block="last")}
         return ctx
 
