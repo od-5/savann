@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{{ object.name }}{% endblock %}
+{% block keywords %}{{ object.meta_keywords }}{% endblock %}
+{% block description %}{{ object.meta_description }}{% endblock %}
 {% block content %}
     <section id="content">
         <div class="main">
