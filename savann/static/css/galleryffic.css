@@ -1,161 +1,150 @@
 div.content {
-	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
-	background: none;
-	display: none;
-	width: 434px;
-	height: 625px;
-	margin:0 43px 0 0;
-	padding: 0px;
-	float: left;
-	overflow: hidden;
+  background: none;
+  display: none;
+  width: 434px;
+  height: 625px;
+  margin: 0 43px 0 0;
+  padding: 0px;
+  float: left;
+  overflow: hidden;
 }
 div.content img {
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-div.content a, div.navigation a {
-	text-decoration: none;
-	color: #777;
+div.content a,
+div.navigation a {
+  text-decoration: none;
+  color: #777;
 }
-div.content a:focus, div.content a:hover, div.content a:active {
-	text-decoration: underline;
+div.content a:focus,
+div.content a:hover,
+div.content a:active {
+  text-decoration: underline;
 }
 div.slideshow-container {
-	position: relative;
-	height: 625px; /* This should be set to be at least the height of the largest image in the slideshow */
-	z-index:1;
-	
-}
-
-div.slideshow {
+  position: relative;
+  height: 625px;
+  z-index: 1;
 }
 div.slideshow span.image-wrapper {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 434px;
-	height: 504px; 
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 434px;
+  height: 504px;
 }
 div.slideshow a.advance-link {
-	display: block;
-	width: 434px;   
-	height: 504px; /* This should be set to be at least the height of the largest image in the slideshow */
-	padding: 0;
-	margin: 0;
-
+  display: block;
+  width: 434px;
+  height: 504px;
+  padding: 0;
+  margin: 0;
 }
 div.slideshow a.advance-link img {
-	padding:0;
-	margin:0;
-	display:block;
-	position:absolute;
-	top:0;
-	left:0;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
-	text-decoration: none;
-}
-div.slideshow img {
+div.slideshow a.advance-link:hover,
+div.slideshow a.advance-link:active,
+div.slideshow a.advance-link:visited {
+  text-decoration: none;
 }
 div.download {
-	float: right;
+  float: right;
 }
 div.caption-container {
-	position:absolute;
-	bottom: 0px;
-	left: 0;
-	width: 0px;
-	height: 0px;
-	z-index:9999;
-	width:434px;
-	height:122px;
-
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 9999;
+  width: 434px;
+  height: 122px;
 }
 span.image-caption {
-	position: absolute;
-	width: 434px;
-	height: 122px;
-	bottom: 0;
-	left: 0;
-	z-index:10;
+  position: absolute;
+  width: 434px;
+  height: 122px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 div.caption {
-	width: 434px;
-	height: 122px;
-	padding: 0px 0 0 0px;
-	position: absolute;
-	bottom:0px;
-	z-index:99999;
-	left:0px;
-	display:block;
-}
-
-div.image-title {
-}
-
-div.image-desc {
-}
-div.navigation {
-/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+  width: 434px;
+  height: 122px;
+  padding: 0px 0 0 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 99999;
+  left: 0px;
+  display: block;
 }
 div#thumbs {
-	width: 458px !important;
-	float: left;
-	overflow: visible;
-	padding: 0px 0px 0 0;
-	position:relative;
-	z-index:9999;
+  width: 458px !important;
+  float: left;
+  overflow: visible;
+  padding: 0px 0px 0 0;
+  position: relative;
+  z-index: 9999;
 }
 ul.thumbs {
-	width: 458px !important;
-	float: left;
-	margin-left:0;
-	padding: 0;
-	position:relative;
-	z-index:9999;
-	overflow:visible;
+  width: 458px !important;
+  float: left;
+  margin-left: 0;
+  padding: 0;
+  position: relative;
+  z-index: 9999;
+  overflow: visible;
 }
 ul.thumbs li {
-	height: 159px;
-	width:217px;
-	margin:0;
-	overflow: hidden;
-	padding:0;
-	vertical-align:top;
-	float:left;
+  height: 159px;
+  width: 217px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: top;
+  float: left;
 }
-ul.thumbs li.item {margin:0 24px 25px 0;}
+ul.thumbs li.item {
+  margin: 0 24px 25px 0;
+}
 ul.thumbs li img {
-	border: none;
+  border: none;
 }
 a.thumb:focus {
-	outline: none;
+  outline: none;
 }
 div.pagination {
-	clear: both;
-	text-align:center;
-	position:relative;
-	z-index:10;
+  clear: both;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 div.top.pagination {
-	display:none;
+  display: none;
 }
-div.navigation div.bottom {
-}
-div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
-	padding:0 4px;
-	font-weight:bold;
-	color:#fff;
+div.pagination a,
+div.pagination span.current,
+div.pagination span.ellipsis {
+  padding: 0 4px;
+  font-weight: bold;
+  color: #fff;
 }
 div.pagination a:hover {
-	text-decoration: none;
-	color:#ffeaa8;
+  text-decoration: none;
+  color: #ffeaa8;
 }
 div.pagination span.current {
-	color:#ffeaa8;
+  color: #ffeaa8;
 }
 div.pagination span.ellipsis {
-	border: none;
-	padding: 5px 0 3px 2px;
+  border: none;
+  padding: 5px 0 3px 2px;
 }
