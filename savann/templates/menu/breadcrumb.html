@@ -1,5 +1,5 @@
-<ul class="breadcrumbs">
-{% if ancestors.count != 1 %}
+<ul class="breadcrumbs">{{ ancestors.count }}
+{% if ancestors|length != 1 %}
   {% for ance in ancestors%}
     <li>
     {% if not forloop.last %}
