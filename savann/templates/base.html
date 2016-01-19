@@ -73,6 +73,17 @@
 <meta name="google-site-verification" content="rDk78ClA7pYFkeEH1YmLrCCV6c3pk3MmzRlMqITdvsY" />
 <meta name='yandex-verification' content='774b42e585d07f3e' />
 <meta name='wmail-verification' content='cc94e26e9084d8812580ed1eb87f0058' />
+<?php include_once("analyticstracking.php") ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71227336-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body oncopy="return false">
 {% cms_toolbar %}
@@ -96,6 +107,7 @@
 
         {% static_placeholder "logo" %}
     {% placeholder header %}
+
 
 </header>
 
