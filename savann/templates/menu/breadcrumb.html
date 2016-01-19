@@ -5,7 +5,7 @@
     <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span>
   {% else %}
     {% if object %}
-    <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span> {{ object.get_absolute_url }}
+    <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span> {{ object.name }}
     {% else %}
     {{ ance.get_menu_title }}
     {% endif %}
