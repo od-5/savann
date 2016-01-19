@@ -1,15 +1,17 @@
 <ul class="breadcrumbs">
+{% if ancestors.count != 1 %}
   {% for ance in ancestors%}
-  <li>
-  {% if not forloop.last %}
-    <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span>
-  {% else %}
-    {% if object %}
-    <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span> {{ object.name }}
+    <li>
+    {% if not forloop.last %}
+      <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span>
     {% else %}
-    {{ ance.get_menu_title }}
+      {% if object %}
+      <a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a> <span>/</span> {{ object.name }}
+      {% else %}
+      {{ ance.get_menu_title }}
+      {% endif %}
     {% endif %}
-  {% endif %}
-  </li>
-{% endfor %}
+    </li>
+  {% endfor %}
+{% endif %}
 </ul>
