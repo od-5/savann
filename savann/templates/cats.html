@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load template_tags thumbnail cms_tags i18n %}
+{% load template_tags thumbnail cms_tags menu_tags i18n %}
 {% block content %}
     {% placeholder "content" %}
     {% with cats=request.current_page.posts.all|filter_cat:1|filter:request no_cats=request.current_page.posts.all|filter_cat:0|filter:request %}
